@@ -35,12 +35,12 @@
       // Composant Hero sans classe CSS optionnelle et sans navigation intégrée
       Hero.render("#content", HeroData[0]);
       // Composant Hero avec une classe CSS optionnelle (pour modifier l'image d'arrière-plan) et sans navigation inntégrée
-      Hero.render("#content", HeroData[0], "hero--bg-hero"); //hero--bg-hero est définie dans component/Hero/style.css
+      Hero.render("#content", HeroData[1], "hero--bg-hero"); //hero--bg-hero est définie dans component/Hero/style.css
 
       // Composant Hero avec classe CSS optionnelle et avec navigation intégrée (mais sans classe CSS optionnelle pour la navigation)
-      Hero.addNavigation( NavigationData[1] ); 
-      Hero.render("#content", HeroData[1], "hero--bg-hero"); 
-      
+      Hero.addNavigation( NavigationData[2] ); 
+      Hero.render("#content", HeroData[2], "hero--bg-hero"); 
+
       // Composant Hero avec une classe CSS optionnelle et navigation intégrée avec également une classe CSS optionnelle
       Hero.addNavigation( NavigationData[3], "navigation--accent" ); // navigation--accent est définie dans component/Navigation/style.css
       Hero.render("#content", HeroData[3], "hero--bg-dark"); // hero--bg-dark est définie dans component/Hero/style.css
