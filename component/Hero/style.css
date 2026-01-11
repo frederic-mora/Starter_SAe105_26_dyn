@@ -43,11 +43,11 @@
 }
 
 .hero--bg-hero {
-  --_bg-hero: var(--bg-hero, url('../../assets/hero-bg.jpg'));
+  --bg-hero: url('../../assets/hero-bg.jpg');
 }
 
 .hero--bg-dark {
-  --_bg-hero: var(--bg-hero, url('../../assets/dark-hero-bg.jpg'));
+  --bg-hero: url('../../assets/dark-hero-bg.jpg');
 }
 
 /* Cible .hero qui contient un <nav> */

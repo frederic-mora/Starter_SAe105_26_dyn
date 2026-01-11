@@ -18,7 +18,6 @@
 @import "./variables.css" layer(variables);
 @import "./reset.css" layer(reset);
 @import "./base.css" layer(base);
-@import "./utilities.css" layer(utilities);
 
 @import "../component/Hero/style.css" layer(components);
 @import "../component/Navigation/style.css" layer(components);

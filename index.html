@@ -11,21 +11,39 @@
 
  
     <script type="module">
+      // Importer le composant Navigation 
       import { Navigation } from "./component/Navigation/index.js";
+      // Importer les données à utiliser avec le composant Navigation
       import { NavigationData } from "./data/NavigationData.js";
+
+      // Dans les exemples suivants, les composants seront tous affichés dans l'élément d'identifiant "content"
+      // Mais ce n'est pas une obligation, vous pouvez choisir n'importe quel élément de votre page
+
+      // afficher le composant Navigation dans l'élément d'identifant "content" avec les différentes données
       Navigation.render("#content", NavigationData[0]);
       Navigation.render("#content", NavigationData[1]);
+      // Exemples avec une classe CSS optionnelle
+      // navigation--accent et navigation--dark sont définies dans component/Navigation/style.css
       Navigation.render("#content", NavigationData[2], "navigation--accent");
       Navigation.render("#content", NavigationData[3], "navigation--dark");
 
+      // Importer le composant Hero
       import { Hero } from "./component/Hero/index.js";
+      // Importer les données à utiliser avec le composant Hero
       import { HeroData } from "./data/HeroData.js";
 
-      Hero.render("#content", HeroData[0], "hero--bg-hero");
+      // Composant Hero sans classe CSS optionnelle et sans navigation intégrée
+      Hero.render("#content", HeroData[0]);
+      // Composant Hero avec une classe CSS optionnelle (pour modifier l'image d'arrière-plan) et sans navigation inntégrée
+      Hero.render("#content", HeroData[0], "hero--bg-hero"); //hero--bg-hero est définie dans component/Hero/style.css
 
-      Hero.addNavigation( NavigationData[3], "navigation--accent" );
-      Hero.render("#content", HeroData[3], "hero--bg-dark");
-
+      // Composant Hero avec classe CSS optionnelle et avec navigation intégrée (mais sans classe CSS optionnelle pour la navigation)
+      Hero.addNavigation( NavigationData[1] ); 
+      Hero.render("#content", HeroData[1], "hero--bg-hero"); 
+      
+      // Composant Hero avec une classe CSS optionnelle et navigation intégrée avec également une classe CSS optionnelle
+      Hero.addNavigation( NavigationData[3], "navigation--accent" ); // navigation--accent est définie dans component/Navigation/style.css
+      Hero.render("#content", HeroData[3], "hero--bg-dark"); // hero--bg-dark est définie dans component/Hero/style.css
 
     </script>
   </body>
