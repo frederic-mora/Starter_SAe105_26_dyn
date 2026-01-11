@@ -1,0 +1,81 @@
+.hero {
+  /*
+    Variable CSS "privée" (convention avec underscore _)
+
+    Syntaxe : --_nom: var(--nom-public, valeur-par-defaut);
+
+    Fonctionnement :
+    - --_bg-hero est la variable "privée" utilisée uniquement dans ce composant
+    - var(--bg-hero, ...) cherche d'abord une variable publique --bg-hero
+    - Si --bg-hero n'existe pas, la valeur par défaut (URL de l'image) est utilisée
+
+    - --bg-hero est déclarée dans le composant parent avec l'attribut style="--bg-hero: url(...)"
+
+    Avantages :
+    - Permet de personnaliser le composant de l'extérieur via --bg-hero
+    - Garde une valeur de fallback si aucune personnalisation n'est fournie
+    - Le underscore _ signale aux développeurs que c'est une variable interne
+    */
+  --_bg-hero: var(--bg-hero, url("https://placehold.co/600x400"));
+  --_fg-hero: var(--fg-hero, var(--clr-light));
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+
+  margin: 2rem auto;
+  padding: 10rem 0;
+  font-family: var(--ff-sans);
+  color: var(--_fg-hero);
+  text-align: center;
+  background-color: var(--clr-dark);
+  background-image: linear-gradient(
+      90deg,
+      rgba(19, 67, 77, 0.7) 0%,
+      rgba(86, 22, 91, 0.7) 100%
+    ),
+    var(--_bg-hero);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.hero--bg-hero {
+  --_bg-hero: var(--bg-hero, url('../../assets/hero-bg.jpg'));
+}
+
+.hero--bg-dark {
+  --_bg-hero: var(--bg-hero, url('../../assets/dark-hero-bg.jpg'));
+}
+
+/* Cible .hero qui contient un <nav> */
+/* Spécificité = (0,1,1) - classe + élément */
+.hero:has(nav) {
+  padding-top: 0;
+}
+
+/* Cible .hero__nav qui est aussi un élément <nav> */
+/* Spécificité = (0,1,1) - classe + élément */
+.hero__nav:is(nav) {
+  align-self: stretch;
+  margin-bottom: 5rem;
+  background-color: transparent;
+}
+
+.hero__title {
+  max-width: 20ch;
+  margin: 1rem auto;
+  font-size: 4.5rem;
+  font-weight: 700;
+  letter-spacing: 2.6px;
+}
+
+.hero__desc {
+  max-width: 35ch;
+  margin: 1rem auto;
+  font-size: 1.375rem;
+  font-weight: 500;
+  line-height: 1.5;
+}

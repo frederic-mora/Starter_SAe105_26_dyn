@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Starter Start-Up SAé1.05</title>
+    <link rel="stylesheet" href="./css/global.css" />
+  </head>
+  <body>
+    <div id="content"></div>
+
+ 
+    <script type="module">
+      import { Navigation } from "./component/Navigation/index.js";
+      import { NavigationData } from "./data/NavigationData.js";
+      Navigation.render("#content", NavigationData[0]);
+      Navigation.render("#content", NavigationData[1]);
+      Navigation.render("#content", NavigationData[2], "navigation--accent");
+      Navigation.render("#content", NavigationData[3], "navigation--dark");
+
+      import { Hero } from "./component/Hero/index.js";
+      import { HeroData } from "./data/HeroData.js";
+
+      Hero.render("#content", HeroData[0], "hero--bg-hero");
+
+      Hero.addNavigation( NavigationData[3], "navigation--accent" );
+      Hero.render("#content", HeroData[3], "hero--bg-dark");
+
+
+    </script>
+  </body>
+</html>

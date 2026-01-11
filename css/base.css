@@ -1,0 +1,6 @@
+/* Css de base */
+
+body {
+  font-family: var(--ff-sans, sans-serif);
+}
+

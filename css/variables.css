@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,500;9..40,700&display=swap");
+
+:root {
+  /* Primitive Tokens */
+  --clr-dark: hsl(253, 69%, 8%);
+  --clr-gray: hsl(0, 0%, 50%);
+  --clr-light: hsl(0, 0%, 100%);
+  --clr-violet: hsl(252, 75%, 60%);
+
+  /* Semantic Tokens */
+
+  --fg: var(--clr-dark);
+  --bg: var(--clr-light);
+  --accent: var(--clr-violet);
+  --btn-fg: var(--clr-light);
+
+  --rounded: 20px;
+
+  --ff-sans: "DM sans", sans-serif;
+}
