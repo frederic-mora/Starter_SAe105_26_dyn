@@ -22,17 +22,17 @@
 }
 
 .navigation--accent {
-  --_fg-nav: var(--accent);
-  --_bg-nav: var(--fg);
+  --fg-nav: var(--accent);
+  --bg-nav: var(--fg);
 }
 
 .navigation--dark {
-  --_fg-nav: var(--fg-nav, var(--clr-light));
-  --_bg-nav: var(--bg-nav, var(--clr-dark));
+  --fg-nav: var(--fg-nav, var(--clr-light));
+  --bg-nav: var(--bg-nav, var(--clr-dark));
 }
 
 .navigation--light {
-  --_fg-nav: var(--fg-nav, var(--clr-light));
+  --fg-nav: var(--fg-nav, var(--clr-light));
 }
 
 .navigation__logo {
