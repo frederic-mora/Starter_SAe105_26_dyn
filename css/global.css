@@ -21,4 +21,4 @@
 
 @import "../component/Hero/style.css" layer(components);
 @import "../component/Navigation/style.css" layer(components);
-@import "../component/HeroContainer/style.css" layer(components);
+@import "../component/Container/style.css" layer(components);

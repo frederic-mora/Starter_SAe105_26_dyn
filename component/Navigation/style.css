@@ -12,6 +12,12 @@
 
   gap: 1rem;
   padding: 1rem;
+
+  @media (width > 50rem) {
+    margin: 1rem auto;
+    max-width: 1200px;
+    padding: 1rem 2rem;
+  }
   font-family: var(--ff-sans);
   color: var(--_fg-nav);
   background-color: var(--_bg-nav);

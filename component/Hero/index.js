@@ -53,4 +53,12 @@ Hero.render = function( where, data, css="" ){
     node.innerHTML += Hero.format( data, css );
 }
 
+/* Hero.clearNavigation
+    > aucune valeur de retour
+    La fonction vide le contenu HTML stocké dans Hero.navHTML
+*/
+Hero.clearNavigation = function(){
+    Hero.navHTML = "";
+}
+
 export { Hero };

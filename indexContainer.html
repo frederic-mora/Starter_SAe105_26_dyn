@@ -15,25 +15,26 @@
       import { NavigationData } from "./data/NavigationData.js";
       import { Hero } from "./component/Hero/index.js";
       import { HeroData } from "./data/HeroData.js";
-      import { HeroContainer } from "./component/HeroContainer/index.js";
+      import { Container } from "./component/Container/index.js";
       
       // Card 1 : sans navigation
-      Hero.navHTML = "";
-      HeroContainer.addCard( HeroData[0] );
+      Hero.clearNavigation();
+      Container.addContent( Hero, HeroData[0] );
       
       // Card 2 : avec navigation
       Hero.addNavigation( NavigationData[0] );
-      HeroContainer.addCard( HeroData[1], "hero--bg-hero" );
-      
+      Container.addContent( Hero, HeroData[1], "hero--bg-hero" );
+
+      // Nav
+      Container.addContent( Navigation, NavigationData[1], "navigation--accent" );
+
       // Card 3 : sans navigation
-      Hero.navHTML = "";
-      HeroContainer.addCard( HeroData[2], "hero--bg-dark" );
-      
-      // Card 4 : avec une autre navigation
-      Hero.addNavigation( NavigationData[1], "navigation--accent" );
-      HeroContainer.addCard( HeroData[3] );
-      
-      HeroContainer.render("#content");
+      Hero.clearNavigation();
+      Container.addContent( Hero, HeroData[2], "hero--bg-dark" );
+    
+      // On affiche le container
+      Container.render("#content");
+
     </script>
   </body>
 </html>
