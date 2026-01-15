@@ -1,0 +1,13 @@
+.heroContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Mobile: disposition verticale */
+@media (max-width: 768px) {
+    .heroContainer {
+        flex-direction: column;
+    }
+} 

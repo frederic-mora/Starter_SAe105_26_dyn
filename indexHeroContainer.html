@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Starter Start-Up SAé1.05</title>
+    <link rel="stylesheet" href="./css/global.css" />
+  </head>
+  <body>
+    <div id="content"></div>
+
+ 
+    <script type="module">
+      import { Navigation } from "./component/Navigation/index.js";
+      import { NavigationData } from "./data/NavigationData.js";
+      import { Hero } from "./component/Hero/index.js";
+      import { HeroData } from "./data/HeroData.js";
+      import { HeroContainer } from "./component/HeroContainer/index.js";
+      
+      // Card 1 : sans navigation
+      Hero.navHTML = "";
+      HeroContainer.addCard( HeroData[0] );
+      
+      // Card 2 : avec navigation
+      Hero.addNavigation( NavigationData[0] );
+      HeroContainer.addCard( HeroData[1], "hero--bg-hero" );
+      
+      // Card 3 : sans navigation
+      Hero.navHTML = "";
+      HeroContainer.addCard( HeroData[2], "hero--bg-dark" );
+      
+      // Card 4 : avec une autre navigation
+      Hero.addNavigation( NavigationData[1] );
+      HeroContainer.addCard( HeroData[3] );
+      
+      HeroContainer.render("#content");
+    </script>
+  </body>
+</html>

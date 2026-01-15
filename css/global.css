@@ -13,7 +13,7 @@
   - Permet d'importer des fichiers CSS dans des layers spécifiques avec layer()
 */
 
-@layer variables, reset, base, components, utilities;
+@layer variables, reset, base, components;
 
 @import "./variables.css" layer(variables);
 @import "./reset.css" layer(reset);
@@ -21,3 +21,4 @@
 
 @import "../component/Hero/style.css" layer(components);
 @import "../component/Navigation/style.css" layer(components);
+@import "../component/HeroContainer/style.css" layer(components);
