@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Starter Start-Up SAé1.05</title>
+    <link rel="stylesheet" href="./css/global.css" />
+  </head>
+  <body>
+    <div id="content"></div>
+
+ 
+    <script type="module">
+      import { Hero } from "./component/Hero/index.js";
+      import { HeroData } from "./data/HeroData.js";
+      
+     
+      Hero.clearNavigation();
+      // choix aléatoire d’un jeu de données pour le composant
+      let indice = Math.floor(Math.random() * HeroData.length);
+      // Exlication :
+      // Math.random() génère un nombre décimal aléatoire entre 0 (inclus) et 1 (exclus).
+      // En multipliant par HeroData.length (le nombre de jeux de données disponibles),
+      // on obtient un nombre décimal entre 0 (inclus) et HeroData.length (exclus).
+      // Math.floor() arrondit ce nombre à l'entier inférieur le plus proche,
+      // ce qui donne un indice valide entre 0 et HeroData.length - 1.
+      Hero.render( "#content", HeroData[ indice ] );
+      
+
+      
+
+    </script>
+  </body>
+</html>

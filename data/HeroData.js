@@ -22,6 +22,10 @@ let HeroData = [
     {
         title: "Join EduWorld Today",
         subtitle: "Empowering education for a better future.",
+    },
+    {
+        title: "Explore TravelNow",
+        subtitle: "Your adventure starts here."
     }
 ]
 export { HeroData };
